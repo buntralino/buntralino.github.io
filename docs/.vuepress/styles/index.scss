@@ -1,0 +1,17 @@
+:root {
+    // accent colors
+    --vp-c-accent: #6a6e49;
+    --vp-c-accent-bg: #6a6e49;
+    --vp-c-accent-hover: #86865c;
+    --vp-c-accent-soft: rgba(201, 200, 167, 0.14);
+}
+[data-theme='dark'] {
+    // brand colors
+    --vp-c-accent: #dbe4a6;
+    --vp-c-accent-bg: #dbe4a6;
+    --vp-c-accent-hover: #c0c573;
+    --vp-c-accent-soft: rgba(194, 168, 111, 0.16);
+
+    // background colors
+    --vp-c-bg: #15151a;
+}
