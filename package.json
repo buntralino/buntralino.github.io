@@ -6,15 +6,22 @@
   "type": "module",
   "scripts": {
     "docs:build": "vuepress build docs",
+    "build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "docs:update-package": "npx vp-update"
   },
-  "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.7",
-    "@vuepress/theme-default": "^2.0.0-rc.11",
-    "sass-embedded": "^1.82.0",
-    "vue": "^3.4.0",
-    "vuepress": "^2.0.0-rc.7"
+  "dependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.19",
+    "@vuepress/plugin-search": "2.0.0-rc.66",
+    "mermaid": "^11.4.1",
+    "sass-embedded": "^1.83.0",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.19",
+    "vuepress-theme-hope": "2.0.0-rc.64"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
