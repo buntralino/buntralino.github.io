@@ -48,7 +48,7 @@ highlights:
       icon: rocket
 
 - header: How does it work?
-  description: Buntralino is a hybrid app development framework that lets you use web technologies (HTML, CSS, JavaScript, TypeScript) to make desktop apps. Buntralino applications work by creating a Bun application that launches and manages Neutralino.js windows. Neutralino.js windows can exchange information with Bun and each other in a client-server model through websockets, with you using a nice promise-based API. Bun is a faster alternative to Node.js or Deno, while Neutralino.js uses native OS' browser and augments it with native functions.
+  description: Buntralino is a hybrid app development framework that lets you use web technologies (HTML, CSS, JavaScript, TypeScript) to make desktop apps. Buntralino applications work by creating a Bun application that launches and manages Neutralino.js windows. Neutralino.js windows can exchange information with Bun and each other in a client-server model through websockets, with you using a nice promise-based API. Bun is a faster alternative to Node.js or Deno, while Neutralino.js uses native OS' browser and augments it with native functions. <br> <br> <a class="route-link auto-link vp-hero-action primary no-external-link-icon" href="/architecture" aria-label="See the Architecture">See the Architecture</a>
 
 footer: MIT Licensed | Copyright © 2024-present Cosmo Myzrail Gorynych
 ---
