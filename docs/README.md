@@ -23,7 +23,7 @@ highlights:
   description: Buntralino unites <a href="https://bun.sh/" target="_blank">Bun</a> and <a href="https://neutralino.js.org/" target="_blank">Neutralino.js</a> to make a simpler, lighter alternative to Electron and NW.js. Use Neutralino.js API at client and send harder tasks to Bun while keeping your development process easy.
   features:
     - title: Lighter builds
-      details: Buntralino uses built-in OS' browser instead of Chrome or Chromium compared to Electron or NW.js
+      details: Buntralino uses built-in OS' browser instead of Chrome or Chromium compared to Electron or NW.js.
       icon: feather-pointed
     - title: HTML5 GUI, for real this time
       details: Using a regular browser means no issues with <code>require</code>, duplicated APIs, or other incompatibilities.
