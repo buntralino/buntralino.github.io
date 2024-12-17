@@ -10,6 +10,10 @@ export default defineUserConfig({
   title: 'Buntralino',
   description: 'Make better, faster cross-platform desktop apps without the bloat of Chrome while still keeping the comfort of node.js development',
 
+  head: [
+    ['link', { rel: 'icon', href: '/Buntralino.png' }],
+  ],
+
   theme,
 
   alias: {
