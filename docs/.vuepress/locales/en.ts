@@ -35,4 +35,5 @@ export const enSidebar = sidebar([
   'cli-api',
   'bun-api',
   'client-api',
+  'safari-gotchas'
 ]);

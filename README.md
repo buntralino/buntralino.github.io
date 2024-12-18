@@ -8,8 +8,9 @@ Buntralino unites Bun and Neutralino.js to make a simpler, lighter alternative t
 
 ```sh
 git clone https://github.com/buntralino/buntralino.github.io.git
-cd ./buntralino.github.io.git
+cd ./buntralino.github.io
 npm install
+npm run dev
 ```
 
 Actual documentation is placed in the `docs` folder. For configuration of the site, refer to [Vuepress (v2.x) documentation](https://v2.vuepress.vuejs.org/guide/configuration.html).
