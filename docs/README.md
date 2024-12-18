@@ -1,8 +1,12 @@
 ---
 home: true
-title: Home
+title: Buntralino — make better, faster hybrid apps
+shortTitle: Home
+description: Buntralino is a hybrid app development framework that lets you use web technologies (HTML, CSS, JavaScript, TypeScript) to make desktop apps. Buntralino applications work by creating a Bun application that launches and manages Neutralino.js windows.
 heroImage: /Buntralino.png
 tagline: Make better, faster cross-platform desktop apps without the bloat of Chrome while still keeping the comfort of node.js development.
+banner: /opengraph.png
+cover: /opengraph.png
 
 actions:
   - text: Get started
