@@ -61,3 +61,7 @@ bun run build
 ```
 
 That's it! Buntralino will build and package the app for distribution using `neutralino.config.json` Neutralino.js uses.
+
+:::center
+![](/CrossPlatformSampleApp.png)
+:::

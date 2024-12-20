@@ -56,3 +56,6 @@ highlights:
 
 footer: MIT Licensed | Copyright © 2024-present Cosmo Myzrail Gorynych
 ---
+:::center
+![](/CrossPlatformSampleApp.png)
+:::
