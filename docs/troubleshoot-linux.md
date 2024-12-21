@@ -8,9 +8,9 @@ icon: rectangle-xmark
 :::note
 This page automatically opens when a Buntralino application fails to start a GUI process in time. Buntralino is a framework for building different cross-platform apps.
 
-If you're the developer of the app launched, you should include these instructions in your troubleshooting and installation guides.
+***If you're the developer*** of the app launched, you should include these instructions in your troubleshooting and installation guides.
 
-If you're a user of the app that opened this page, you can follow this guide to fix the problem on your machine but contact the developer of the app if the issue persists. Please don't bother Buntralino developers about apps not built by Buntralino developers (:
+***If you're a user*** of the app that opened this page, you can follow this guide to fix the problem on your machine but contact the developer of the app if the issue persists. Please don't bother Buntralino developers about apps not built by Buntralino developers (:
 :::
 
 Buntralino uses Neutralino.js, and Neutralino.js requires `libwebkit2gtk` v4.0 or v4.1 installed in the system to create GUI windows. `libwebkit2gtk` is a library that provides a WebKit-based rendering engine for GTK applications, or, simply put, allows app developers to display webpage content in their apps. If nothing appears when you launch an app built on Buntralino, this is probably because `libwebkit2gtk` is missing in your system.
