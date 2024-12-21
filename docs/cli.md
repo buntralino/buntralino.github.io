@@ -12,6 +12,10 @@ Buntralino CLI has the following commands:
 
 Creates an empty Buntralino project. The `name` argument is optional and is used to prefill application name — it can be changed later in `neutralino.config.json`.
 
+::: info Are you getting `could not determine executable to run for package` errors?
+There is [an unresolved issue with `bunx`](https://github.com/oven-sh/bun/issues/9841) at this moment, but usually just removing the folder created by `buntralino create` and running the command again fixes the problem. Magic 🤷
+:::
+
 ## `buntralino add`
 
 Adds Buntralino to the existing Neutralino.js project. Make sure to run this command in the root of your Neutralino.js project. (Where `neutralino.config.json` is.)

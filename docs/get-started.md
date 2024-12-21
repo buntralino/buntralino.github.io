@@ -41,6 +41,10 @@ buntralino add
 ```
 :::
 
+::: info Are you getting `could not determine executable to run for package` errors?
+There is [an unresolved issue with `bunx`](https://github.com/oven-sh/bun/issues/9841) at this moment, but usually just removing the folder created by `buntralino create` and running the command again fixes the problem. Magic 🤷
+:::
+
 ## 2. Run the application
 
 ::: code-tabs#newornot
