@@ -5,8 +5,8 @@ import { enNavbar, enSidebar } from './locales/en';
 export default hopeTheme({
   hostname: 'https://buntralino.github.io/',
   logo: '/Buntralino@smoll.png',
-  repo: 'https://github.com/buntralino/buntralino.github.io/',
-  docsRepo: 'https://github.com/buntralino/buntralino.github.io/',
+  repo: 'https://github.com/buntralino/buntralino.github.io',
+  docsRepo: 'https://github.com/buntralino/buntralino.github.io',
   docsBranch: 'main',
   docsDir: '/docs',
   titleIcon: false,
