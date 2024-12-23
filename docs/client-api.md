@@ -87,3 +87,18 @@ Sends a signal to the main Bun process to completely exit Buntralino application
 ```typescript
 buntralino.shutdown();
 ```
+
+### `buntralino.disableBunCheck()`
+
+By default, when an application is packaged, Buntralino client will close a Neutralino window if it was not opened with Buntralino, and open Buntralino executable. This is to remedy cases where users get confused on what executable to launch, and usually is harmless as Buntralino windows should be created through Bun API with `buntralino.create`, and third-party windows don't need Neutralino.js API.
+
+In case you do need to use `Neutralino.window.create`, you will need to call `buntralino.disableBunCheck()` right after you import `buntralino-client`. Otherwise the Neutralino window will nuke itself and will try to open its parent app.
+
+Example:
+
+```typescript
+import * as buntralino from 'buntralino-client';
+buntralino.disableBunCheck();
+
+// Proceed as usual
+```
