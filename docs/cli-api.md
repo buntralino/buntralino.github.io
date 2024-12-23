@@ -22,6 +22,9 @@ await buntralino.run(buntralinoIndex);
 // Packages the Buntralino application for redistribution.
 // Make sure to prebuild all the assets used by Neutralino beforehand.
 await buntralino.build(buntralinoIndex);
+
+// Build with additional arguments for the `bun build --compile` command
+await buntralino.build(buntralinoIndex, ['--external', 'original-fs']);
 ```
 
 Note that configuration for application name, its icons and metadata is taken from `neutralino.config.json`. You can find documentation for its fields [here](https://neutralino.js.org/docs/configuration/neutralino.config.json).

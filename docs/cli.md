@@ -30,6 +30,14 @@ Builds the project for distribution by building Neutralino.js application, bundl
 
 Note that configuration for application name, its icons and metadata is taken from `neutralino.config.json`. You can find documentation for its fields [here](https://neutralino.js.org/docs/configuration/neutralino.config.json).
 
+You may also need to pass additional arguments to the `bun build` command with a `--` separator. For example, if you need to add `--external original-fs` to the build command, use this:
+
+```sh
+buntralino build src/bun/index.ts -- --external original-fs
+```
+
+Minification flags, `--compile` and `--outfile` are already included — don't duplicate them.
+
 ## `buntralino --version`
 
 Displays the current `buntralino-cli` version.
