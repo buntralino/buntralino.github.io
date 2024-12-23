@@ -75,18 +75,42 @@ Hides the window.
 ### exit(target: string): Promise&lt;void&gt;
 Closes the specified window. Alias: `close(target: string)`
 
-### getPosition(target: string): Promise&lt;WindowPosOptions&gt;
-Returns the current window position.
+### setAlwaysOnTop(target: string, onTop: boolean): Promise&lt;void&gt;
+Sets whether the window should stay on top of other windows.
 
 ### getSize(target: string): Promise&lt;WindowSizeOptions&gt;
 Returns the current window size.
 
-### setAlwaysOnTop(target: string, onTop: boolean): Promise&lt;void&gt;
-Sets whether the window should stay on top of other windows.
-
 ### setSize(target: string, options: WindowSizeOptions): Promise&lt;void&gt;
 Sets the window size.
-- `options`: Partial WindowSizeOptions object, merges with current size
+
+- `options`: Partial WindowSizeOptions object; merges with the current size.
+
+`WindowSizeOptions` is:
+
+```typescript
+interface WindowSizeOptions {
+    width?: number;
+    height?: number;
+    minWidth?: number;
+    minHeight?: number;
+    maxWidth?: number;
+    maxHeight?: number;
+    resizable?: boolean;
+}
+```
+
+### getPosition(target: string): Promise&lt;WindowPosOptions&gt;
+Returns the current window position.
+
+`WindowPosOptions` is:
+
+```typescript
+interface WindowPosOptions {
+    x: number;
+    y: number;
+}
+```
 
 ### move(target: string, x: number, y: number): Promise&lt;void&gt;
 Moves the window to specified coordinates. Alias: `setPosition(target: string, x: number, y: number)`
@@ -103,14 +127,14 @@ Gets the window title.
 ### setTitle(target: string, title: string): Promise&lt;void&gt;
 Sets the window title.
 
-### evalJs(target: string, js: string): Promise&lt;void&gt;
-Evaluates JavaScript code in the window context.
-
 ### navigate(target: string, url: string): Promise&lt;void&gt;
 Navigates the window to a new URL.
 
 ### reload(target: string): Promise&lt;void&gt;
 Reloads the current window.
+
+### evalJs(target: string, js: string): Promise&lt;void&gt;
+Evaluates JavaScript code in the window context.
 
 ## Method Registration
 
@@ -168,6 +192,8 @@ buntralino.registerMethodMap(methodMapUsingMap);
 Checks if a connection to a named window is currently open. Can be used to check whether a window is still open, or whether the connection to it is ready.
 
 ## Events
+
+### `events` property
 
 The package exports an EventEmitter instance as `events` that emits:
 
