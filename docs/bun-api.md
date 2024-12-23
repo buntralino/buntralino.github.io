@@ -208,3 +208,61 @@ await buntralino.create('/secondary.html', {
     height: 300
 });
 ```
+
+### sendEvent(target: string, event: string, payload?: unknown): void
+
+Sends an event to a specific named Neutralino window. This method allows you to communicate with a specific window instance by sending an event along with optional data.
+
+Parameters:
+- **target**: `string`
+  - The name of the window to which the event should be sent.
+- **event**: `string`
+  - The name of the event to be sent.
+- **payload**: `unknown` (optional)
+  - An optional data object that will be sent along with the event. This can be any JSON-serializable value.
+
+Example:
+```typescript
+import * as buntralino from 'buntralino';
+
+// Send an event to a specific Neutralino window
+buntralino.sendEvent('main', 'loginSuccessful', {
+    username: 'Doofus3000'
+});
+```
+Client side code:
+```typescript
+// Listen to events through Neutralino API:
+Neutralino.events.on('loginSuccessful', e => {
+    const {username} = e.detail;
+    console.log(`Logged in as ${username}!`);
+});
+```
+
+### broadcast(event: string, payload?: unknown): void
+
+Sends an event to all currently connected Neutralino windows. This method is useful for broadcasting messages or notifications to multiple windows at once.
+
+Parameters:
+- **event**: `string`
+  - The name of the event to be broadcasted.
+- **payload**: `unknown` (optional)
+  - An optional data object that will be sent along with the event. This can be any JSON-serializable value.
+
+Example:
+```typescript
+import * as buntralino from 'buntralino';
+
+// Broadcast an event to all Neutralino windows
+await buntralino.broadcast('newUpdate', {
+    version: '1.4.2'
+});
+```
+Client side code:
+```typescript
+// Listen to events through Neutralino API:
+Neutralino.events.on('newUpdate', e => {
+    const {version} = e.detail;
+    console.log(`New version ${version} has been released!`);
+});
+```
