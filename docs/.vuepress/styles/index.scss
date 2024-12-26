@@ -16,6 +16,16 @@
     --vp-c-bg: #15151a;
 }
 
+// Nice shadow on the logo
 .vp-hero-image {
     filter: drop-shadow(0 5px 6px rgba(192, 197, 115, 0.1)) drop-shadow(0 18px 23px rgba(192, 197, 115, 0.05));
+}
+
+// Fix weird header margin
+#main-description {
+    margin-top: 0;
+}
+// add more space to make header layout more symmetrical
+.vp-hero-info-wrapper {
+    padding-top: 3rem;
 }
