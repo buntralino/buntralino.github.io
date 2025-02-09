@@ -1,5 +1,6 @@
-import { defineUserConfig } from '@vuepress/cli';
-import { viteBundler } from '@vuepress/bundler-vite';
+import { defineUserConfig } from '@vuepress/cli'
+import { markdownContainerPlugin } from '@vuepress/plugin-markdown-container'
+import { viteBundler } from '@vuepress/bundler-vite'
 import path from 'path';
 
 import theme from './theme';
@@ -24,4 +25,14 @@ export default defineUserConfig({
   },
 
   bundler: viteBundler(),
+
+  plugins: [
+    markdownContainerPlugin({
+      type: 'columns',
+    }),
+    markdownContainerPlugin({
+      type: 'column',
+      marker: '!'
+    })
+  ]
 })

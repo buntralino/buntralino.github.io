@@ -51,11 +51,57 @@ highlights:
       details: Default template supports TypeScript and automatically bundles all the code for production.
       icon: rocket
 
-- header: How does it work?
-  description: Buntralino is a hybrid app development framework that lets you use web technologies (HTML, CSS, JavaScript, TypeScript) to make desktop apps. Buntralino applications work by creating a Bun application that launches and manages Neutralino.js windows. Neutralino.js windows can exchange information with Bun and each other in a client-server model through websockets, with you using a nice promise-based API. Bun is a faster alternative to Node.js or Deno, while Neutralino.js uses native OS' browser and augments it with native functions. <br> <br> <a class="route-link auto-link vp-hero-action primary no-external-link-icon" href="/architecture" aria-label="See the Architecture">See the Architecture</a>
-
 footer: MIT Licensed | Copyright © 2024-present Cosmo Myzrail Gorynych
 ---
+
+## Simple Promise-based API
+:::columns
+!!!column
+### Bun
+```ts
+import {create, registerMethod, evalJs} from 'buntralino';
+
+/* Add a Bun method to UI */
+registerMethod('sayHello', async (payload: {
+  message: string
+}) => {
+  await Bun.sleep(1000);
+  return `Bun says "${payload.message}"!`;
+});
+
+/* Create a window named "main" */
+await create('/', {
+  name: 'main'
+});
+/* Manipulate created windows */
+evalJs('main', `console.log('👀');`);
+```
+!!!
+!!!column
+### UI
+```ts
+import * as buntralino from 'buntralino-client';
+
+(async () => {
+  /* Wait till Buntralino API is ready */
+  await buntralino.ready;
+
+  /* Run a Bun method and get its return value */
+  const response = await buntralino.run('sayHello', {
+    message: 'Hello, Buntralino!'
+  });
+  console.log(response);
+})();
+```
+!!!
+:::
+
 :::center
 ![](/CrossPlatformSampleApp.png)
 :::
+
+##  How does it work?
+
+Buntralino is a hybrid app development framework that lets you use web technologies (HTML, CSS, JavaScript, TypeScript) to make desktop apps. Buntralino applications work by creating a Bun application that launches and manages Neutralino.js windows. Neutralino.js windows can exchange information with Bun and each other in a client-server model through websockets, with you using a nice promise-based API. Bun is a faster alternative to Node.js or Deno, while Neutralino.js uses native OS' browser and augments it with native functions.
+
+<a class="route-link auto-link vp-hero-action primary no-external-link-icon" href="/architecture" aria-label="See the Architecture">See the Architecture</a>

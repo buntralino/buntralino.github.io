@@ -23,5 +23,8 @@
   },
   "prettier": {
     "singleQuote": true
+  },
+  "devDependencies": {
+    "@vuepress/plugin-markdown-container": "^2.0.0-rc.66"
   }
 }

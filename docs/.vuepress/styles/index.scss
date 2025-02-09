@@ -29,3 +29,17 @@
 .vp-hero-info-wrapper {
     padding-top: 3rem;
 }
+
+
+.custom-container.columns {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    @media (max-width: 960px) {
+        flex-flow: column-reverse nowrap;
+    }
+}
+.custom-container.column {
+    flex: 1 1 10%;
+    overflow: scroll;
+}
