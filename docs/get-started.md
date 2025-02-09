@@ -32,6 +32,7 @@ Instal the Buntralino CLI and create a Buntralino project:
 ```sh
 bun install -g buntralino-cli
 buntralino create
+# Then follow the instructions to input your project's name and template.
 ```
 @tab Add to Neutralino.js project
 ```sh

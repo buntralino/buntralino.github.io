@@ -19,6 +19,9 @@ const buntralinoIndex = 'src/bun/index.ts';
 // Run the Buntralino application and wait until it is closed
 await buntralino.run(buntralinoIndex);
 
+// Run the Buntralino application and provide additional arguments to its main script.
+await buntralino.run(buntralinoIndex, '--devmode')
+
 // Packages the Buntralino application for redistribution.
 // Make sure to prebuild all the assets used by Neutralino beforehand.
 await buntralino.build(buntralinoIndex);
