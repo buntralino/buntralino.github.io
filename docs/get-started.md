@@ -41,9 +41,6 @@ buntralino add
 ```
 :::
 
-::: info Are you getting `could not determine executable to run for package` errors?
-There is [an unresolved issue with `bunx`](https://github.com/oven-sh/bun/issues/9841) at this moment, but usually just removing the folder created by `buntralino create` and running the command again fixes the problem. Magic 🤷
-:::
 
 ## 2. Run the application
 
@@ -59,11 +56,6 @@ bun run dev
 ```
 :::
 
-::: info Possible issues on newer macOS and Linux devices
-Various OS' security measures may disable the `+x` flag on Neutralino executables, marking them as non-executable. If you see permission or "executable not found" errors, it is probably because your system unmarked downloaded Neutralino binaries as executables. You can fix it by going to the created folder > `bin` folder and running `chmod +x *` there. 
-
-I've sent a [PR](https://github.com/neutralinojs/neutralinojs-cli/pull/284) to Neutralino.js so it auto-fixes the permissions, and this PR is now merged and will be released with the next Neutralino.js version.
-:::
 
 ## 3. Build the app
 ```sh
